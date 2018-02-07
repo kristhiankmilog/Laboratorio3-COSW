@@ -1,5 +1,5 @@
-exportclassTodo {
-    privatedescription:string;
+export class Todo {
+private description:string;
 private priority: Number;
 private completed: boolean;
 

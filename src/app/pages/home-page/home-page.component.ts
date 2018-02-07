@@ -7,9 +7,16 @@ import{Component, OnInit}from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
+  public  mensage:string;
+
   constructor() { }
 
   ngOnInit() {
+    
+  }
+
+  myEvent(event) {
+    this.mensage="Esta función no esta disponible"
   }
 
 }
