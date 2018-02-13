@@ -1,0 +1,15 @@
+<h2>Tasks</h2>
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Last Name</th>
+        <th>Photo</th>
+    </tr>
+    </thead>
+    <tr *ngFor="let todo of todos">
+        <td>{{user.name}}</td>
+        <td>{{user.lastname}}</td>
+        <td><img [src]="user.image" width="150" height="150" /></td>
+    </tr>
+</table>
