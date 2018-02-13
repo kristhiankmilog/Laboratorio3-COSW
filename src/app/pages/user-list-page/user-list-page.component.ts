@@ -1,5 +1,5 @@
 import{Component, OnInit}from '@angular/core';
-import {TodoService}from '../../services/todo.service';
+import{UserService}from '../../services/users.service';
 import{User} from '../../models/User';
 
 @Component({
@@ -8,14 +8,16 @@ import{User} from '../../models/User';
   styleUrls: ['./user-list-page.component.css']
 })
 export class UserListPageComponent implements OnInit {
-  private todos: User[] = [];
-
-  constructor(public todoService: TodoService) {
-
-  }
-
-  ngOnInit() {
-    
-  }
+  private users: User[] = [];
+  
+    constructor(public userService: UserService) {
+  
+    }
+  
+    ngOnInit() {
+      this.userService.list().subscribe(usersResponse=>{
+        this.users = usersResponse;
+      })
+    }
 
 }
